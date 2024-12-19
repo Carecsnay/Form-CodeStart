@@ -6,6 +6,7 @@
     box-sizing: border-box;
 
     font-family: "Poppins", sans-serif;
+    letter-spacing: 0.7px;
 }
 
 body {
@@ -61,6 +62,7 @@ body {
     border: 2px solid #f0f0f0;
     width: 100%;
     padding: 10px;
+    border: 2px solid #00000020;
 }
 
 .form-item i {
@@ -76,4 +78,51 @@ body {
     bottom: -10px;
     left: 11px;
     visibility: hidden;
+}
+
+.form-container button {
+    background-color: #fc00ff;
+    border: 2px solid #fc00ff;
+    border-radius: 10px;
+    width: 100%;
+
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.form-container button:focus {
+    outline: none;
+}
+
+/* Utilities */
+
+.form-item.success input {
+    border-color: #2ecc71;
+}
+
+.form-item.success .fas.fa-check-circle {
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-item.error input {
+    border-color: #e74c3c;
+}
+
+.form-item.error .fas.fa-exclamation-circle {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+input:focus {
+    outline: none;
+}
+
+.form-item.error small {
+    visibility: visible;
 }
