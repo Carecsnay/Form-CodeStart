@@ -74,6 +74,21 @@ body {
     visibility: hidden;
 }
 
+.form-item:nth-child(3) > i.fas.fa-exclamation-circle,
+.form-item:nth-child(4) > i.fas.fa-exclamation-circle {
+    right: 35px;
+}
+
+.form-item .fa-solid.fa-eye-low-vision {
+    visibility: visible;
+    color: #00000090;
+    cursor: pointer;
+}
+
+.form-item .fa-solid.fa-eye-low-vision.active {
+    color: #000000;
+}
+
 .form-item small {
     color: red;
     position: absolute;
