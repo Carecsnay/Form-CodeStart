@@ -74,19 +74,28 @@ body {
     visibility: hidden;
 }
 
-.form-item:nth-child(3) > i.fas.fa-exclamation-circle,
-.form-item:nth-child(4) > i.fas.fa-exclamation-circle {
-    right: 35px;
-}
-
 .form-item .fa-solid.fa-eye-low-vision {
     visibility: visible;
     color: #00000090;
     cursor: pointer;
+    right: 10px;
+}
+
+.form-item .fa-solid.fa.fa-solid.fa-eye-low-vision.active,
+.form-item .fa-solid.fa-eye-low-vision.active {
+    right: 10px;
 }
 
 .form-item .fa-solid.fa-eye-low-vision.active {
     color: #000000;
+}
+
+.form-item.success .fa-solid.fa-eye-low-vision,
+.form-item.error .fa-solid.fa-eye-low-vision {
+    visibility: visible;
+    color: #00000090;
+    cursor: pointer;
+    right: 35px;
 }
 
 .form-item small {

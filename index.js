@@ -1,10 +1,12 @@
 const dqs = (element) => document.querySelector(element);
+const dqsa = (element) => document.querySelectorAll(element);
 
 const formElement = dqs(".form-container");
 const userNameInput = dqs("#user-name");
 const userEmailInput = dqs("#user-email");
 const userPasswordInput = dqs("#user-password");
 const userPasswordConfirmationInput = dqs("#user-password-confirmation");
+const eyeElements = dqsa(".fa-eye-low-vision");
 const buttonElement = dqs("button");
 
 formElement.addEventListener("submit", (event) => {
@@ -70,3 +72,18 @@ function checkEmail(email) {
         email
     );
 }
+
+// ativando e desativando a visibilidade da senha
+eyeElements.forEach((eyeElement) => {
+    eyeElement.addEventListener("click", () => {
+        if (eyeElement.classList.contains("active")) {
+            eyeElement.classList.remove("active");
+            userPasswordInput.type = "password";
+            userPasswordConfirmationInput.type = "password";
+        } else {
+            eyeElement.classList.add("active");
+            userPasswordInput.type = "text";
+            userPasswordConfirmationInput.type = "text";
+        }
+    });
+});
