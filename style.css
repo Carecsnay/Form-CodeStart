@@ -107,8 +107,9 @@ body {
 }
 
 .form-container button {
-    background-color: #fc00ff;
-    border: 2px solid #fc00ff;
+    background: linear-gradient(90deg, rgb(84, 0, 240, 1) 0%, rgba(252, 0, 255, 1) 100%);
+
+    border: none;
     border-radius: 10px;
     width: 100%;
     color: #fff;
