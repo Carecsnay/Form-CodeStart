@@ -76,14 +76,15 @@ function checkEmail(email) {
 // ativando e desativando a visibilidade da senha
 eyeElements.forEach((eyeElement) => {
     eyeElement.addEventListener("click", () => {
-        if (eyeElement.classList.contains("active")) {
-            eyeElement.classList.remove("active");
-            userPasswordInput.type = "password";
-            userPasswordConfirmationInput.type = "password";
-        } else {
+        const formItem = eyeElement.closest(".form-item");
+        const input = formItem.querySelector("input");
+
+        if (input.type === "password") {
+            input.type = "text";
             eyeElement.classList.add("active");
-            userPasswordInput.type = "text";
-            userPasswordConfirmationInput.type = "text";
+        } else {
+            input.type = "password";
+            eyeElement.classList.remove("active");
         }
     });
 });
